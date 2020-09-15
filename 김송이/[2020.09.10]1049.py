@@ -1,3 +1,5 @@
+# 세트와 낱개 포함해서 최소가격 구하기
+
 def main():
     broken, brand = map(int, input().split())
     set_price, one_price, small_price = [], [], []
