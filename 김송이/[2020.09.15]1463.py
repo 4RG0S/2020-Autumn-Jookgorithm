@@ -9,7 +9,6 @@ def main():
     for i in range(1, n + 1):
         if i == 1:
             count_list[i] = 0
-            continue
         else:
             count_list[i] = count_list[i - 1] + 1
             if i % 3 == 0 and count_list[i // 3] + 1 < count_list[i]:
