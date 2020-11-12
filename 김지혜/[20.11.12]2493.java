@@ -23,7 +23,6 @@ public class Main {
         StringTokenizer st = new StringTokenizer(input);
 
         Stack<Top> stack = new Stack<>();
-        Stack<Top> tmpStack = new Stack<>();
         for(int i=1;i<=n;i++){
             int cur = Integer.parseInt(st.nextToken());
             int target = 0;
@@ -32,7 +31,7 @@ public class Main {
                 bw.write(0+" ");
             }else{
                 while(!stack.isEmpty() && stack.peek().height<cur){
-                    tmpStack.push(stack.pop());
+                    stack.pop();
                 }
                 if(stack.isEmpty()) target=0;
                 else target = stack.peek().index;
